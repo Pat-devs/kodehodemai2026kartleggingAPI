@@ -2,7 +2,7 @@
 
 
 
-import { greet } from "./test.js"; // important: remember to add ./ or equivalent for the file. and add .js extention
+import { greet, createParagraph } from "./domUtils.js"; // important: remember to add ./ or equivalent for the file. and add .js extention
 
 greet()
 
@@ -11,17 +11,7 @@ greet()
 let pokemonContainer = document.getElementById("pokemon-container")
 
 
-// creates a clickable paragraph tag, with given text
-function createParagraph(text) {
-    // create the element in a variable and set its text
-    let paragraphElement = document.createElement("p")
-    paragraphElement.textContent = text
-    // add click event to the paragraphElement (not finished!)
-    paragraphElement.addEventListener("click", console.log)
 
-    // attach the element to the container
-    pokemonContainer.append(paragraphElement)
-}
 
 // run the function (to see if it works)
 createParagraph("Test")

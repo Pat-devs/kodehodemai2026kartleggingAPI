@@ -1,3 +1,12 @@
+// import "HVA" from "HVORFRA"
+
+
+
+import { greet } from "./test.js"; // important: remember to add ./ or equivalent for the file. and add .js extention
+
+greet()
+
+
 // Dom elements
 let pokemonContainer = document.getElementById("pokemon-container")
 

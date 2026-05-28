@@ -1,7 +1,3 @@
-export function greet() {
-    console.log("HELLO!")
-}
-
 // creates a clickable paragraph tag, with given text
 export function createParagraph(text) {
     // create the element in a variable and set its text
@@ -11,5 +7,8 @@ export function createParagraph(text) {
     paragraphElement.addEventListener("click", console.log)
 
     // attach the element to the container
-    pokemonContainer.append(paragraphElement)
+    // pokemonContainer.append(paragraphElement)
+
+    // return the paragraphElement
+    return paragraphElement
 }

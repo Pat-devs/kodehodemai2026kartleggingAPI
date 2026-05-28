@@ -1,30 +1,11 @@
-// import "HVA" from "HVORFRA"
-
-
-
-import { greet, createParagraph } from "./domUtils.js"; // important: remember to add ./ or equivalent for the file. and add .js extention
-
-greet()
-
+import { createParagraph } from "./domUtils.js"; 
 
 // Dom elements
 let pokemonContainer = document.getElementById("pokemon-container")
 
 
-
-
-// run the function (to see if it works)
-createParagraph("Test")
-
-
 // API - Application Programming Interface
-
 // endpoint: https://pokeapi.co/api/v2/pokemon
-
-
-
-
-
 async function getData() {
     
     // 1. make a request and store the response
@@ -35,11 +16,13 @@ async function getData() {
     let data = await response.json()
     // console.log(data)
 
-    // now that we have data, we can do something with it :)
-    // lets try show the results...
- 
+    // clear the contain from any exising elements
+    pokemonContainer.innerHTML = "" // in this case its safe to use innerHTML because we want to remove everyhing (including any events)
+
+    // show the pokemon list on the page 
     for (let pokemon of data.results) {
-        console.log(pokemon)
+
+        pokemonContainer.append(createParagraph(pokemon.name))
     }
 
 }

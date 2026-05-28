@@ -1,3 +1,9 @@
+// Dom elements
+let pokemonContainer = document.getElementById("pokemon-container")
+console.log(pokemonContainer)
+
+pokemonContainer.textContent = "It works"
+
 // API - Application Programming Interface
 
 // endpoint: https://pokeapi.co/api/v2/pokemon

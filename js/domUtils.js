@@ -4,6 +4,7 @@ export function createParagraph(text) {
     let paragraphElement = document.createElement("p")
     paragraphElement.textContent = text
     // add click event to the paragraphElement (not finished!)
+    // TODO: the event should then make a new request, to get data about the pokemon
     paragraphElement.addEventListener("click", console.log)
 
     // attach the element to the container
